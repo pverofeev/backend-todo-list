@@ -20,7 +20,7 @@ spec:
     spec:
       volumes:
       containers:
-        - name: backend
+        - name: backend-todo
           image: ghcr.io/tfk70/app:1.0
           imagePullPolicy: IfNotPresent
           resources:
