@@ -1,0 +1,13 @@
+apiVersion: kci.rocks/v1alpha1
+kind: DbInstance
+metadata:
+  name: generic-db
+  namespace: practice
+spec:
+  adminSecretRef:
+    Name: some-db
+    Namespace: practice
+  engine: <postgres or mysql>
+  generic:
+    host: db-postgresql.practice.svc.cluster.local
+    port: 5432
