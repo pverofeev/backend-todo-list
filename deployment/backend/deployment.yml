@@ -48,9 +48,9 @@ spec:
                   key: POSTGRES_PASSWORD
                   name: backend-todo-db-credentials
             - name: DATABASE_PORT
-              value: 5432
+              value: '5432'
             - name: DATABASE_URL
-              value: 0.0.0.0
+              value: db-postgresql.practice.svc.cluster.local
             - name: DATABASE_NAME
               valueFrom:
                 secretKeyRef:
