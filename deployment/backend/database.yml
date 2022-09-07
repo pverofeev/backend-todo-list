@@ -5,7 +5,7 @@ metadata:
   name: profiles
   namespace: youthink
 spec:
-  secretName: profiles-db-credentials
+  secretName: backend-todo-db-credentials
   instance: default
   deletionProtected: false
   backup:
