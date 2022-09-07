@@ -36,4 +36,23 @@ spec:
               protocol: TCP
           env:
             - name: SPRING_PROFILES_ACTIVE
-              value: docker
+              value: do
+            - name: DATABASE_USER
+              valueFrom:
+                secretKeyRef:
+                  key: POSTGRES_USER
+                  name: backend-todo-db-credentials
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  key: POSTGRES_PASSWORD
+                  name: backend-todo-db-credentials
+            - name: DATABASE_PORT
+              value: 5432
+            - name: DATABASE_URL
+              value: 0.0.0.0
+            - name: DATABASE_NAME
+              valueFrom:
+                secretKeyRef:
+                  key: POSTGRES_DB
+                  name: backend-todo-db-credentials    
