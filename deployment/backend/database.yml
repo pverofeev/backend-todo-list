@@ -2,8 +2,8 @@
 apiVersion: 'kci.rocks/v1alpha1'
 kind: Database
 metadata:
-  name: profiles
-  namespace: youthink
+  name: backend-todo
+  namespace: practice
 spec:
   secretName: backend-todo-db-credentials
   instance: default
