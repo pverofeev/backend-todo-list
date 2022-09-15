@@ -6,7 +6,7 @@ metadata:
   namespace: practice
 spec:
   secretName: backend-todo-db-credentials
-  instance: default
+  instance: generic-db
   deletionProtected: false
   backup:
     enable: false
