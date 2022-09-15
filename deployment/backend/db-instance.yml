@@ -5,7 +5,7 @@ metadata:
   namespace: practice
 spec:
   adminSecretRef:
-    Name: some-db
+    Name: backend-todo-db-credentials
     Namespace: practice
   engine: postgres
   generic:
