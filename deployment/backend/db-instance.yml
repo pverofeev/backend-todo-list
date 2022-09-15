@@ -4,9 +4,6 @@ metadata:
   name: generic-db
   namespace: practice
 spec:
-  adminSecretRef:
-    Name: backend-todo-db-credentials
-    Namespace: practice
   engine: postgres
   generic:
     host: db-postgresql.practice.svc.cluster.local
