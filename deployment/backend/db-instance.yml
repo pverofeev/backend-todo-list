@@ -7,7 +7,7 @@ spec:
   adminSecretRef:
     Name: some-db
     Namespace: practice
-  engine: <postgres or mysql>
+  engine: postgres
   generic:
     host: db-postgresql.practice.svc.cluster.local
     port: 5432
