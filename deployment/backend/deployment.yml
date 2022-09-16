@@ -44,6 +44,6 @@ spec:
             - name: DATABASE_PORT
               value: '5432'
             - name: DATABASE_URL
-              value: practice.svc.cluster.local
+              value: postgres.practice.svc.cluster.local
             - name: DATABASE_NAME
               value: todo_list
