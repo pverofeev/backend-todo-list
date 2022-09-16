@@ -38,32 +38,12 @@ spec:
             - name: SPRING_PROFILES_ACTIVE
               value: do
             - name: DATABASE_USER
-              valueFrom:
-                secretKeyRef:
-                  key: POSTGRES_USER
-                  name: backend-todo-db-credentials
+              value: program
             - name: DATABASE_PASSWORD
-              valueFrom:
-                secretKeyRef:
-                  key: POSTGRES_PASSWORD
-                  name: backend-todo-db-credentials
+              value: test
             - name: DATABASE_PORT
               value: '5432'
             - name: DATABASE_URL
               value: postgres.practice.pod.cluster.local
             - name: DATABASE_NAME
-              valueFrom:
-                secretKeyRef:
-                  key: POSTGRES_DB
-                  name: backend-todo-db-credentials    
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: backend-todo-db-credentials
-  namespace: practice
-type: Opaque
-data:
-  POSTGRES_USER: cHJvZ3JhbQ==
-  POSTGRES_PASSWORD: dGVzdA==      
-  POSTGRES_DB: dG9kb19saXN0
+              value: todo_list
