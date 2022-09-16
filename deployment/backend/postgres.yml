@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres
+  namespace: practice
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: postgres
+  template:
+    metadata:
+      labels:
+        app: postgres
+    spec:
+      volumes:
+      containers:
+        - name: postgres
+          image: postgres:13
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 1Gi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+          ports:
+            - containerPort: 5432
+              name: http
+              protocol: TCP
+          env:
+            - name: POSTGRES_USER
+              value: program
+            - name: POSTGRES_PASSWORD
+              value: test
+            - name: POSTGRES_DB
+              value: todo_list
