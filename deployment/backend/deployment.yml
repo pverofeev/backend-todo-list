@@ -56,3 +56,14 @@ spec:
                 secretKeyRef:
                   key: POSTGRES_DB
                   name: backend-todo-db-credentials    
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: backend-todo-db-credentials
+  namespace: default
+type: Opaque
+data:
+  POSTGRES_USER: program
+  POSTGRES_PASSWORD: test      
+  POSTGRES_DB: todo_list
