@@ -1,13 +1,15 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Gateway
+apiVersion: v1
+kind: Service
 metadata:
-  name: landing
+  name: pseudo-ingress
   namespace: practice
+  labels:
+    app: pseudo-ingress
 spec:
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
   selector:
-    istio: ingressgateway
-  servers:
-    - port:
-        number: 8080
-        name: http
-        protocol: HTTP
+    service: backend-todo
+  type: NodePort
