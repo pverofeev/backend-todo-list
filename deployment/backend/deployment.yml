@@ -50,7 +50,7 @@ spec:
             - name: DATABASE_PORT
               value: '5432'
             - name: DATABASE_URL
-              value: db-postgresql.practice.svc.cluster.local
+              value: postgres.practice.pod.cluster.local
             - name: DATABASE_NAME
               valueFrom:
                 secretKeyRef:
