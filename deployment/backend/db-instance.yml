@@ -9,5 +9,5 @@ spec:
     Namespace: practice
   engine: postgres
   generic:
-    host: practice.svc.cluster.local
+    host: postgres.practice.svc.cluster.local
     port: 5432
