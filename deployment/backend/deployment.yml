@@ -64,6 +64,6 @@ metadata:
   namespace: default
 type: Opaque
 data:
-  POSTGRES_USER: program
-  POSTGRES_PASSWORD: test      
-  POSTGRES_DB: todo_list
+  POSTGRES_USER: cHJvZ3JhbQ==
+  POSTGRES_PASSWORD: dGVzdA==      
+  POSTGRES_DB: dG9kb19saXN0
