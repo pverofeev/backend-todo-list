@@ -61,7 +61,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: backend-todo-db-credentials
-  namespace: default
+  namespace: practice
 type: Opaque
 data:
   POSTGRES_USER: cHJvZ3JhbQ==
