@@ -1,19 +1,15 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: minimal-ingress
+  name: backend-ingress
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
-  ingressClassName: nginx-example
   rules:
   - host: backend-todo.io
     http:
       paths:
       - path: /
-        pathType: Prefix
         backend:
-          service:
-            name: backend-todo
-            port:
-              number: 8080
+          serviceName: backend-todo
+          servicePort: 8080
