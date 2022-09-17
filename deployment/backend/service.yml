@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: backend-todo
+  name: backend-todo-service
   namespace: practice
   labels:
-    app: backend-todo
+    app: backend-todo-service
 spec:
   ports:
     - name: http
