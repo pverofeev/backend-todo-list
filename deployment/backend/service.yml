@@ -6,7 +6,6 @@ metadata:
   labels:
     app: backend-todo
 spec:
-  type: NodePort
   ports:
     - name: http
       port: 8080
