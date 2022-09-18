@@ -8,17 +8,11 @@ spec:
   selector:
     matchLabels:
       app: backend-todo
-  strategy:
-    rollingUpdate:
-      maxSurge: 1
-      maxUnavailable: 1
-    type: RollingUpdate
   template:
     metadata:
       labels:
         app: backend-todo
     spec:
-      volumes:
       containers:
         - name: backend-todo
           image: ghcr.io/tfk70/testtodo:1.0
