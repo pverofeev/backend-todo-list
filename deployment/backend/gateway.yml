@@ -6,7 +6,8 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - http:
+    - host: backend-todo.app
+      http:
         paths:
         - path: /
           pathType: Prefix
