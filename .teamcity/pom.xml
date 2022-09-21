@@ -100,5 +100,10 @@
       <version>${kotlin.version}</version>
       <scope>compile</scope>
     </dependency>
+            <dependency>
+            <groupId>org.jetbrains.teamcity</groupId>
+            <artifactId>server-api</artifactId>
+            <version>${teamcity.dsl.version}</version>
+    </dependency>
   </dependencies>
 </project>
