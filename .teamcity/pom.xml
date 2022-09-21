@@ -76,6 +76,11 @@
 
   <dependencies>
     <dependency>
+            <groupId>org.jetbrains.teamcity</groupId>
+            <artifactId>server-api</artifactId>
+            <version>${teamcity.dsl.version}</version>
+    </dependency>
+    <dependency>
       <groupId>org.jetbrains.teamcity</groupId>
       <artifactId>configs-dsl-kotlin-latest</artifactId>
       <version>${teamcity.dsl.version}</version>
@@ -99,11 +104,6 @@
       <artifactId>kotlin-script-runtime</artifactId>
       <version>${kotlin.version}</version>
       <scope>compile</scope>
-    </dependency>
-            <dependency>
-            <groupId>org.jetbrains.teamcity</groupId>
-            <artifactId>server-api</artifactId>
-            <version>${teamcity.dsl.version}</version>
     </dependency>
   </dependencies>
 </project>
