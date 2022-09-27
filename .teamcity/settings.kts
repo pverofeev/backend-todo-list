@@ -82,12 +82,12 @@ object Build : BuildType({
         script {
             name = "Apply specs"
             scriptContent = """
-                kubectl apply -f %teamcity.build.default.checkoutDir%/deployment/common/namespace.yml
-                kubectl apply -f %teamcity.build.default.checkoutDir%/deployment/postgres/postgres.yml
-                kubectl apply -f %teamcity.build.default.checkoutDir%/deployment/postgres/postgres-service.yml
-                kubectl apply -f %teamcity.build.default.checkoutDir%/deployment/backend/deployment.yml
-                kubectl apply -f %teamcity.build.default.checkoutDir%/deployment/backend/service.yml
-                kubectl apply -f %teamcity.build.default.checkoutDir%/deployment/backend/gateway.yml
+                kubectl apply -f %teamcity.build.checkoutDir%/deployment/common/namespace.yml
+                kubectl apply -f %teamcity.build.checkoutDir%/deployment/postgres/postgres.yml
+                kubectl apply -f %teamcity.build.checkoutDir%/deployment/postgres/postgres-service.yml
+                kubectl apply -f %teamcity.build.checkoutDir%/deployment/backend/deployment.yml
+                kubectl apply -f %teamcity.build.checkoutDir%/deployment/backend/service.yml
+                kubectl apply -f %teamcity.build.checkoutDir%/deployment/backend/gateway.yml
             """.trimIndent()
         }
     }
