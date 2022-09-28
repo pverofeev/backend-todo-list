@@ -37,7 +37,7 @@ object Build : BuildType({
     name = "Build 123"
 
     params {
-        param("env.GH_TOKEN", "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")
+        param("env.GH_TOKEN", "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")
         param("env.GH_USERNAME", "TFK70")
     }
 
