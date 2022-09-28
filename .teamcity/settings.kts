@@ -34,7 +34,7 @@ project {
 }
 
 object Build : BuildType({
-    name = "Build 123"
+    name = "Build 222"
 
     params {
         param("env.GH_USERNAME", "TFK70")
