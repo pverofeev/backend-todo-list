@@ -37,7 +37,7 @@ object Build : BuildType({
     name = "Build 222"
 
     params {
-        param("env.GH_USERNAME", "TFK70")
+        param("env.GH_USERNAME", "pverofeev")
     }
 
     vcs {
@@ -56,7 +56,7 @@ object Build : BuildType({
                 source = file {
                     path = "Dockerfile"
                 }
-                namesAndTags = "ghcr.io/tfk70/testtodo:1.0"
+                namesAndTags = "ghcr.io/pverofeev/testapp:2.0"
             }
         }
         script {
@@ -66,7 +66,7 @@ object Build : BuildType({
         dockerCommand {
             name = "Push image"
             commandType = push {
-                namesAndTags = "ghcr.io/tfk70/testtodo:1.0"
+                namesAndTags = "ghcr.io/pverofeev/testapp:2.0"
             }
         }
         script {
