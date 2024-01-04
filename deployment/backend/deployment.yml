@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-todo
-  namespace: practice
+  namespace: practice2
 spec:
   replicas: 1
   selector:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend-todo
-          image: ghcr.io/pverofeev/testapp:3.0
+          image: ghcr.io/pverofeev/testapp:4.0
           imagePullPolicy: IfNotPresent
           resources:
             limits:
